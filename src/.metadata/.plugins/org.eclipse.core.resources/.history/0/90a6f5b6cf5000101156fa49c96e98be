@@ -1,0 +1,14 @@
+package modelo;
+
+public class Circulo extends Figura{
+
+	
+	@Override
+	public boolean equals(Oblect otro) {
+		if(!super.equals(otro)) return false;
+		Circulo c = (Circulo)otro;
+		return this.
+		
+	}
+	
+}

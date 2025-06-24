@@ -1,0 +1,10 @@
+package j04_geometria;
+
+public class figura {
+	
+	private double x;
+	private double y;
+	
+	
+
+}

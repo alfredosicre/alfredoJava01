@@ -1,0 +1,18 @@
+package modelo;
+
+public class Rectangulo extends Figura{
+	
+	private double lado1;
+	private double lado2;
+	
+	public Rectangulo(double x, double y, double lado1, double lado2) {
+		
+		super(x, y); // constructor de mi padre
+		this.lado1 = lado1;
+		this.lado2 = lado2;
+		
+		
+	}
+	
+
+}

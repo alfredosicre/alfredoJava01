@@ -1,0 +1,14 @@
+package tests;
+
+import modelo.figura;
+
+public class Test01 {
+	
+	public static void main(String[] args) {
+		
+		figura f = new figura();
+		
+		
+	}
+
+}

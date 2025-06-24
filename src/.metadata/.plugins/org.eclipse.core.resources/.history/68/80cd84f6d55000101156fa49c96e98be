@@ -1,0 +1,19 @@
+package tests;
+
+import modelo.Figura;
+
+public class Test01 {
+	
+	public static void main(String[] args) {
+		
+		Figura f = new Figura();
+		System.out.println(f.getX());
+		
+		// syso --- para sacar la linea System.out.println()
+		circulo c1 = new Circulo(1,2,3);
+		circulo c2 = new Circulo(1,2,333);
+		System.out.println(c1.equals(c2));
+		
+	}
+	
+}
