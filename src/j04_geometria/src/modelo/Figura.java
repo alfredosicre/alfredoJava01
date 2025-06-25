@@ -40,11 +40,16 @@ public abstract class Figura { // abstract puede tener metodos abstractos, sin c
 	public abstract double diametro();
 	
 	// metodo para el Centro de Masas.
-	public static Punto centroMasas(Figura... figs) {
-		var sumX = .0;
-		
-		
-		return null;
+	public static Punto centroMasas(Figura... figs) { // hago una llamada a la clase Punto para el calculo
+		var sumX = .0; // acumulador de sumas
+		var sumY = .0;
+		var sumArea = .0;
+		for(int i = 0; i < figs.length; i++) {
+			sumX += figs[i].area() * figs[i].getX();
+			sumY += figs[i].area() * figs[i].getY();
+			sumArea += figs[i].area();
+		}
+		return new Punto(sumX/sumArea, sumY/sumArea);
 	}
 	
 	
@@ -62,6 +67,5 @@ public abstract class Figura { // abstract puede tener metodos abstractos, sin c
 	public String toString() {
 		return "Figura [x=" + x + ", y=" + y + "]";
 	}
-	
 	
 }

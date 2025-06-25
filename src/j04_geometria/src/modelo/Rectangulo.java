@@ -1,17 +1,14 @@
 package modelo;
 
-public abstract class Rectangulo extends Figura{
+public class Rectangulo extends Figura {
 	
 	private double lado1;
 	private double lado2;
 	
 	public Rectangulo(double x, double y, double lado1, double lado2) { // constructor
-		
 		super(x, y); // constructor de mi padre, lo primero que hace un constructor es llamar al padre, siempre lo primero
 		this.lado1 = lado1;
-		this.lado2 = lado2;
-		
-		
+		this.lado2 = lado2;	
 	}
 
 	public double getLado1() {
