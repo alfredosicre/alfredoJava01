@@ -39,6 +39,14 @@ public abstract class Figura { // abstract puede tener metodos abstractos, sin c
 	// metodo del diametro del circulo
 	public abstract double diametro();
 	
+	// metodo para el Centro de Masas.
+	public static Punto centroMasas(Figura... figs) {
+		var sumX = .0;
+		
+		
+		return null;
+	}
+	
 	
 	public boolean equals(Object otro) {
 		
