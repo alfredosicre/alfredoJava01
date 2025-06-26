@@ -11,7 +11,7 @@ public class Ejercicio04 {
 	
 	public static void main(String[] args) {
 		
-		int num = 8_128;
+		int num = 6;
 		int suma = 0;
 		
 		for (int i = 1; i <= num; i ++) {
@@ -19,8 +19,10 @@ public class Ejercicio04 {
 			if(num % i == 0 && (num/i) != num) {	
 				suma = suma + (num/i);
 			}
-			//System.out.println((num/i) + "  " + num + "  " + i + " num/i");
-			//System.out.println(suma + " suma");
+			System.out.println(num + " / " + i + " = " + (num/i));
+			System.out.println(num%i);
+			System.out.println("suma= " + suma);
+			System.out.println(" ");
 		}
 		
 		if (suma == num) {
