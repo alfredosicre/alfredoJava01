@@ -20,7 +20,7 @@ public class Ejercicio04 {
 				suma = suma + (num/i);
 			}
 			System.out.println(num + " / " + i + " = " + (num/i));
-			System.out.println(num%i);
+			System.out.println("Resto: " + num%i);
 			System.out.println("suma= " + suma);
 			System.out.println(" ");
 		}

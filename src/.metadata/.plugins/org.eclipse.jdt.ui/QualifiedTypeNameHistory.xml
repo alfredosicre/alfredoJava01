@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="modelo.Circulo"/>
     <fullyQualifiedTypeName name="modelo.Figura"/>
     <fullyQualifiedTypeName name="modelo.Punto"/>
+    <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
 </qualifiedTypeNameHistroy>
