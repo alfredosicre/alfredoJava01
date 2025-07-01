@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="modelo.Figura"/>
     <fullyQualifiedTypeName name="modelo.Punto"/>
     <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
