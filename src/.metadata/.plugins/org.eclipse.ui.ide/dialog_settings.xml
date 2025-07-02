@@ -19,6 +19,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/mananas/ALFREDO/alfredoJava01/src/j04_geometria/src/modelo"/>
 			<item value="/Users/mananas/ALFREDO/alfredoJava01/src/j03_objetos"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
