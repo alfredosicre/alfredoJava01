@@ -1,6 +1,6 @@
 package modelo;
 
-public class Circulo extends Figura{
+public class Circulo extends Figura implements Dibujable{
 
 	private double radio;
 	
@@ -43,6 +43,12 @@ public class Circulo extends Figura{
 	@Override
 	public String toString() {
 		return "Circulo [getX()=" + getX() + ", getY()=" + getY() + ", radio=" + radio + "]";
+	}
+
+	@Override
+	public void dibujar() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'dibujar'");
 	}
 
 	

@@ -30,10 +30,10 @@ public abstract class Figura { // abstract puede tener metodos abstractos, sin c
 	}
 	
 	
-	// metodo del area
+	// metodo del area que son abstractos
 	public abstract double area();
 	
-	// metodo del perimetro
+	// metodo del perimetro que son abstractos
 	public abstract double perimetro();
 	
 	// metodo del diametro del circulo
