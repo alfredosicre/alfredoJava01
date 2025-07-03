@@ -47,5 +47,11 @@ public class Rectangulo extends Figura {
 	public String toString() {
 		return "Rectangulo [lado1=" + lado1 + ", lado2=" + lado2 + ", getX()=" + getX() + ", getY()=" + getY() + "]";
 	}
+
+	@Override
+	public double diametro() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }
