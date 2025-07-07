@@ -1,4 +1,4 @@
-package Ejercicios06;
+package Ejercicios07;
 
 public class Ejercicio09Palindromo2 {
 	

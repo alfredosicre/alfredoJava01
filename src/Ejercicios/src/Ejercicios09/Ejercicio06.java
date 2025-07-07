@@ -25,7 +25,7 @@ public class Ejercicio06 {
                 {1.1, 2.2, 3.3, 4.4},
                 {1.1, 2.2, 3.3, 4.4},
                 {1.1, 2.2, 3.3, 4.4},
-            };
+        };
         
         // imprimimos el contenido del Array 2D
         System.out.println("Contenido del array:");
