@@ -1,5 +1,7 @@
 package miscolecciones.genericos;
 
+import java.util.Iterator;
+
 public class ListaEnlazada <T> implements Lista <T> {
 
 	private Nodo primero;
@@ -72,6 +74,12 @@ public class ListaEnlazada <T> implements Lista <T> {
 			this.dato = dato;
 		}
 		
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

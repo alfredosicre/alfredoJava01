@@ -34,6 +34,10 @@ public class Test02genericos {
 			System.out.println(listaNum.buscar(i));
 		}
 		
+		for(Integer num : listaNum) {
+			System.out.println(num);
+		}
+		
 		
 	}
 

@@ -1,5 +1,7 @@
 package miscolecciones.genericos;
 
+import java.util.Iterator;
+
 public class ListaArray <T> implements Lista <T>{
 	
 	private Object[] almacen;
@@ -61,6 +63,12 @@ public class ListaArray <T> implements Lista <T>{
 		}
 		 almacen = nuevo;
 		
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 
