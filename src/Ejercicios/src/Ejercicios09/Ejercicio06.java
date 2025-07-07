@@ -66,8 +66,8 @@ public class Ejercicio06 {
         double[][] transpuesta = trasponer(ejemplo);
 
         System.out.println("\nMatriz traspuesta:");
-        for (double[] fila : transpuesta) {
-            for (double valor : fila) {
+        for (double[] filas : transpuesta) {
+            for (double valor : filas) {
                 System.out.printf("%.2f\t", valor);
             }
             System.out.println();
