@@ -76,10 +76,10 @@ public class Ejercicio09 {
 	    // MAIN ---------------------------------------------------------------------------------------------------
 	    
 	    public static void main(String[] args) {
-	        int filas = 5;
-	        int columnas = 10;
+	        int filas = 8;
+	        int columnas = 15;
 	        
-	        System.out.println("Matriz generada con sumatorios:");
+	        System.out.println("Matriz generada con sumatorios: Filas: " + filas + " , Columnas: "+ columnas);
 	        System.out.println();
 	        int[][] matriz = generarMatrizConSumatorios(filas, columnas);
 	        imprimirMatriz(matriz);

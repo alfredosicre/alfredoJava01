@@ -1,5 +1,8 @@
 package modelo;
 
+import java.text.Collator;
+import java.util.Comparator;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Cliente implements Comparable<Cliente> { // Comparable define el metodo natural de comparacion
@@ -76,7 +79,25 @@ public class Cliente implements Comparable<Cliente> { // Comparable define el me
 	public int compareTo(Cliente o) {
 		return this.IdCliente - o.IdCliente;
 	}
+	// define el orden natural
+	// <0 this va antes que o
+	// =0 son iguales
+	// >0 this va despues de 0
 	
-	
+	// crear un metodo que retorne un Comparator por apellidos y nombre
+	public static Comparator<Cliente> getComparatorApellidos(){
+		return new Comparator<Cliente>() {
+			
+			@Override
+			public int compare(Cliente o1, Cliente o2) {
+				String nom1 = o1.apellido1 + o1.apellido2 + o1.nombre + o1.IdCliente;
+				String nom2 = o2.apellido1 + o2.apellido2 + o2.nombre + o2.IdCliente;
+				
+				Collator col = Collator.getInstance(new Locale.Builder().setLanguage("es").build());
+				return col.compare(nom1, nom2);
+			
+			}
+		};
+	}
 
 }
