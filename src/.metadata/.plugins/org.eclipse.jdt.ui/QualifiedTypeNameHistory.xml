@@ -13,8 +13,12 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="modelo.Cliente"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="sets.StringComparatorLetras"/>
+    <fullyQualifiedTypeName name="java.text.Collator"/>
+    <fullyQualifiedTypeName name="java.util.Locale.Builder"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="interfaces.interfaceFuncional"/>
 </qualifiedTypeNameHistroy>
