@@ -4,9 +4,17 @@ import java.sql.SQLException;
 
 public class e03 {
 	
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		
-		metodo(-5); 
+		try {
+			metodo(-5);
+		} catch (SQLException e) {
+			System.out.println("Esto arregla el programa");
+			e.printStackTrace();
+		} 
+		System.out.println("El programa continua por aquí");
+		
+		
 		
 	}
 	
