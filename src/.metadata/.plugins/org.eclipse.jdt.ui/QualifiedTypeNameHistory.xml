@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="modelo.Figura"/>
     <fullyQualifiedTypeName name="modelo.Punto"/>
     <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="miscolecciones.Lista"/>
     <fullyQualifiedTypeName name="miscolecciones.ListaArray"/>
     <fullyQualifiedTypeName name="miscolecciones.genericos.Lista"/>
@@ -14,11 +13,18 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="modelo.Cliente"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="sets.StringComparatorLetras"/>
-    <fullyQualifiedTypeName name="java.text.Collator"/>
     <fullyQualifiedTypeName name="java.util.Locale.Builder"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="interfaces.interfaceFuncional"/>
+    <fullyQualifiedTypeName name="agenda.persistencia.ContactoDao"/>
+    <fullyQualifiedTypeName name="agenda.modelo.Contacto"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.text.Collator"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>
