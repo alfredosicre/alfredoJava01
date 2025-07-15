@@ -1,12 +1,17 @@
 package agenda.persistencia;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+//import javax.imageio.stream.FileImageInputStream;
 
 import agenda.modelo.Contacto;
 import agenda.util.Contactos;
@@ -22,9 +27,10 @@ public class ContactoDaoMemSerial implements ContactoDao {
 	
 	
 	public ContactoDaoMemSerial() {
-		almacen = new HashMap<Integer, Contacto>();
-		proximoId = 1;
-		cargaInicial();
+//		almacen = new HashMap<Integer, Contacto>();
+//		proximoId = 1;
+//		cargaInicial();
+		leerFicheros();
 	}
 	
 	private void cargaInicial() {
@@ -34,14 +40,35 @@ public class ContactoDaoMemSerial implements ContactoDao {
 		grabar();
 	}
 	
+	private void leerFicheros() {
+		try(FileInputStream fisAlm = new FileInputStream(FICH_ALM);
+			FileInputStream fisId = new FileInputStream(FICH_I)){
+			ObjectInputStream oisAlm = new ObjectInputStream(fisAlm);
+			ObjectInputStream oisId = new ObjectInputStream(fisId);
+			
+			almacen = (Map <Integer, Contacto>) oisAlm.readObject();
+			proximoId = (Integer)oisId.readObject();
+					
+				}catch (FileNotFoundException e) {
+					almacen = new HashMap<Integer, Contacto>();
+					proximoId = 1;
+					cargaInicial();
+				}catch (Exception e) {
+					e.printStackTrace();
+					throw new RuntimeException();
+				}
+		
+	}
+	
 	private void grabar() {
 		try(FileOutputStream fosAlm = new FileOutputStream(FICH_ALM);
 				FileOutputStream fosId = new FileOutputStream(FICH_I)){
+			
 				ObjectOutputStream oosAlm = new ObjectOutputStream(fosAlm);
 				ObjectOutputStream oosId = new ObjectOutputStream(fosId);
 				
 				oosAlm.writeObject(almacen);
-				oosId.writeInt(proximoId);
+				oosId.writeObject(proximoId);
 			
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -54,16 +81,20 @@ public class ContactoDaoMemSerial implements ContactoDao {
 	public void insertar(Contacto c) {
 		c.setIdContacto(proximoId++);
 		almacen.put(c.getIdContacto(), c);
+		grabar();
 	}
 
 	@Override
 	public void actualizar(Contacto c) {
 		almacen.replace(c.getIdContacto(), c);
+		grabar();
 	}
 
 	@Override
 	public boolean eliminar(int idContacto) {
-		return almacen.remove(idContacto) != null;
+		Contacto eliminado = almacen.remove(idContacto);
+		grabar();
+		return eliminado != null;
 	}
 
 	@Override

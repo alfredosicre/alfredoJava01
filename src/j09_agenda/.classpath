@@ -6,5 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/mananas/ALFREDO/proyectojdbc/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="/Users/mananas/ALFREDO/proyectojdbc/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="/Users/mananas/ALFREDO/proyectojdbc/mysql-connector-j-9.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
