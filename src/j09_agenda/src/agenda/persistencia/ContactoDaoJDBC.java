@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.management.RuntimeErrorException;
 import javax.sql.DataSource;
 import agenda.config.Config;
 import agenda.modelo.Contacto;
@@ -22,7 +24,68 @@ public class ContactoDaoJDBC implements ContactoDao {
 
 	@Override
 	public void insertar(Contacto c) {
-		// TODO Auto-generated method stub
+	
+		String sql = "insert into contactos " + "(nombre, apellidos, apodo, tipo_via, via, numero, piso, puerta, codigo_postal, ciudad, provincia)" +
+		"values(?,?,?,?,?,?,?,?,?,?,?)";
+		try(Connection con = ds.getConnection()){
+			con.setAutoCommit(false); // desactivamos el autocommit para controlarlo nosotros
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, c.getNombre());
+			ps.setString(2, c.getApellidos());
+			ps.setString(3, c.getApodo());
+			ps.setString(4, c.getDom().getTipoVia());
+			ps.setString(5, c.getDom().getVia());
+			ps.setInt(6, c.getDom().getNumero());
+			ps.setInt(7, c.getDom().getPiso());
+			ps.setString(8, c.getDom().getPuerta());
+			ps.setString(9, c.getDom().getCodigoPostal());
+			ps.setString(10, c.getDom().getCiudad());
+			ps.setString(11, c.getDom().getProvincia());
+			 
+			int filas = ps.executeUpdate();
+			if(filas == 1) {
+				 //hacemos una consulta para saber que id ha generado
+				PreparedStatement psId = con.prepareStatement("select LAST_INSERT_ID()"); // solo para mysql
+				ResultSet rsId = psId.executeQuery();
+				rsId.next();
+				int id = rsId.getInt(1);
+				// ---
+				// para los telefonos
+				sql = "insert into telefonos (fk_contacto, telefono) values (?,?)";
+				PreparedStatement psTel = con.prepareStatement(sql);
+				int cantTel = 0;
+				for(String tel : c.getTelefonos()) {
+					psTel.setInt(1, id);
+					psTel.setString(2, tel);
+					cantTel += psTel.executeUpdate();
+				}
+				// para los correos
+				sql = "insert into correos (fk_contacto, correo) values (?,?)";
+				PreparedStatement psCorreo = con.prepareStatement(sql);
+				int cantCorreo = 0;
+				for(String correo : c.getCorreos()) {
+					psCorreo.setInt(1, id);
+					psCorreo.setString(2, correo);
+					cantCorreo += psCorreo.executeUpdate();
+				}
+				
+				if(cantTel == c.getTelefonos().size() && cantCorreo == c.getCorreos().size())
+					con.commit();
+				else {
+					con.rollback();
+					throw new RuntimeException();
+				}
+				
+			}else {
+				con.rollback();
+				// lanzar una excepcion para informar
+				throw new RuntimeException();
+			}
+			
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -84,8 +147,24 @@ public class ContactoDaoJDBC implements ContactoDao {
 				dom.setCiudad(rs.getString("ciudad"));
 				dom.setProvincia(rs.getString("provincia"));
 				c.setDom(dom);
-				// faltan correos y telefonos
+				
+				sql = "select telefono from telefonos where fk_contacto = ?";
+				PreparedStatement psTelefonos = con.prepareStatement(sql);
+				psTelefonos.setInt(1, c.getIdContacto());
+				ResultSet rsTelefonos = psTelefonos.executeQuery();
 				resu.add(c);
+				while (rsTelefonos.next()) {
+					c.addTelefonos(rsTelefonos.getString("telefono"));
+				}
+				
+				sql = "select correo from correos where fk_contacto = ?";
+				PreparedStatement psCorreos = con.prepareStatement(sql);
+				psCorreos.setInt(1, c.getIdContacto());
+				ResultSet rsCorreos = psCorreos.executeQuery();
+				resu.add(c);
+				while (rsCorreos.next()) {
+					c.addCorreos(rsCorreos.getString("correo"));
+				}
 				
 			}
 				

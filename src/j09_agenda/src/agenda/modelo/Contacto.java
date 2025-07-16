@@ -17,6 +17,8 @@ public class Contacto implements Comparable<Contacto>, Cloneable, Serializable {
 	public Contacto() {
 		telefonos = new LinkedHashSet<String>();
 		correos = new LinkedHashSet<String>();
+		dom = new Domicilio();
+		
 	}
 	
 	public Contacto(int idContacto, String nombre, String apellidos, String apodo, Domicilio dom) {
