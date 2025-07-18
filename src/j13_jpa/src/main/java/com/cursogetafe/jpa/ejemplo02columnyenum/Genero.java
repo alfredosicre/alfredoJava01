@@ -1,4 +1,4 @@
-package com.cursogetafe.jpa.ejemplo02;
+package com.cursogetafe.jpa.ejemplo02columnyenum;
 
 public enum Genero {
 	

@@ -1,4 +1,4 @@
-package com.cursogetafe.jpa.ejemplo02;
+package com.cursogetafe.jpa.ejemplo02columnyenum;
 
 import com.cursogetafe.jpa.config.Config;
 

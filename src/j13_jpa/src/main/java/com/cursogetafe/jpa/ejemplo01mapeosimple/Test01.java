@@ -1,4 +1,4 @@
-package com.cursogetafe.jpa.ejemplo01;
+package com.cursogetafe.jpa.ejemplo01mapeosimple;
 
 import com.cursogetafe.jpa.config.Config;
 

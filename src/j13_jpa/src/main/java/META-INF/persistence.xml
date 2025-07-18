@@ -8,8 +8,28 @@
     <persistence-unit name="cursoJPA" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>com.cursogetafe.jpa.ejemplo01.Persona</class>
-		<class>com.cursogetafe.jpa.ejemplo02.Persona02</class>
+		<class>com.cursogetafe.jpa.ejemplo01mapeosimple.Persona</class>
+		<class>com.cursogetafe.jpa.ejemplo02columnyenum.Persona02</class>
+		<class>com.cursogetafe.jpa.ejemplo03insertables.Persona03</class>
+		<class>com.cursogetafe.jpa.ejemplo04pkcompuesto.Persona04</class>
+		<class>com.cursogetafe.jpa.ejemplo04pkcompuesto.dni</class>
+		<class>com.cursogetafe.jpa.ejemplo04pkcompuesto.Persona04B</class>
+		<class>com.cursogetafe.jpa.ejemplo04pkcompuesto.dniB</class>
+		<class>com.cursogetafe.jpa.ejemplo05tipoacceso.Persona05</class>
+		<class>com.cursogetafe.jpa.ejemplo06herenciajoined.Circulo</class>
+		<class>com.cursogetafe.jpa.ejemplo06herenciajoined.Rectangulo</class>
+		<class>com.cursogetafe.jpa.ejemplo06herenciajoined.Figura</class>
+		<class>com.cursogetafe.jpa.ejemplo07herenciasingletable.Circulo02</class>
+		<class>com.cursogetafe.jpa.ejemplo07herenciasingletable.Rectangulo02</class>
+		<class>com.cursogetafe.jpa.ejemplo07herenciasingletable.Figura02</class>
+		<class>com.cursogetafe.jpa.ejemplo09unoauno.Contacto</class>
+		<class>com.cursogetafe.jpa.ejemplo09unoauno.Domicilio</class>
+		<class>com.cursogetafe.jpa.ejemplo11muchosauno.Partido</class>
+		<class>com.cursogetafe.jpa.ejemplo11muchosauno.Campo</class>
+		<class>com.cursogetafe.jpa.ejemplo11muchosauno.Partido2</class>
+		<class>com.cursogetafe.jpa.ejemplo11muchosauno.Campo2</class>
+		<class>com.cursogetafe.jpa.ejemplo12muchosamuchos.Equipo</class>
+		<class>com.cursogetafe.jpa.ejemplo12muchosamuchos.Jugador</class>
 		
         <properties>
             <!-- JDBC -->

@@ -1,4 +1,4 @@
-package com.cursogetafe.jpa.ejemplo01;
+package com.cursogetafe.jpa.ejemplo01mapeosimple;
 
 import java.io.Serializable;
 import java.util.Objects;
