@@ -25,8 +25,6 @@ public class Jugador {
 	@ManyToMany(mappedBy = "jugadores")
 	private Set<Equipo> equipos;
 	
-	
-	
 
 	public Integer getIdJugador() {
 		return idJugador;

@@ -24,6 +24,7 @@ public class Partido implements Serializable {
 	@JoinColumn(name = "idcampo")
 	private Campo campo;
 	
+	
 	public int getIdPartido() {
 		return idPartido;
 	}

@@ -26,8 +26,6 @@ public class Equipo {
 		inverseJoinColumns = @JoinColumn(name = "idjugador"))		
 	private Set<Jugador> jugadores;
 	
-	
-	
 
 	public int getIdEquipo() {
 		return idEquipo;

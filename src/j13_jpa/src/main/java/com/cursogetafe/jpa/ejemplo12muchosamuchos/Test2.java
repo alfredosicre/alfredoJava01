@@ -1,6 +1,7 @@
 package com.cursogetafe.jpa.ejemplo12muchosamuchos;
 
 import com.cursogetafe.jpa.config.Config;
+
 import jakarta.persistence.EntityManager;
 
 public class Test2 {
