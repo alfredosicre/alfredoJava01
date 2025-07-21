@@ -1431,3 +1431,11 @@
 2025-07-21 13:13:14,381 [Worker-96: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources
 2025-07-21 13:13:27,771 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/main/resources
 2025-07-21 13:13:27,772 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources
+2025-07-21 13:21:20,511 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/main/resources
+2025-07-21 13:21:20,511 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources
+2025-07-21 13:24:07,151 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/main/resources
+2025-07-21 13:24:07,151 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources
+2025-07-21 13:28:13,984 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/main/resources
+2025-07-21 13:28:13,985 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources
+2025-07-21 13:30:02,850 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/main/resources
+2025-07-21 13:30:02,850 [Worker-109: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/mananas/ALFREDO/alfredoJava01/src/j14_ejerciciojpa/src/test/resources

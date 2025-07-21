@@ -23,6 +23,24 @@ public class Consulta01 {
 		List<Cliente> clientes = q.getResultList();
 		
 		clientes.forEach(System.out::println);
+		
+		// quiero solo los numeros de clientes
+		
+		jpql = "Select c.nroCliente from Cliente c";
+		
+		List<Integer> numeros = em.createQuery(jpql, Integer.class).getResultList();
+		numeros.forEach(System.out::println);
+		
+		System.out.println("-------------------------");
+		jpql = "select c.nroCliente, c.categoria from Cliente c";
+		List<Object[]> lista = em.createQuery(jpql, Object[].class).getResultList();
+		
+		for (Object[] objects : lista) {
+			System.out.println(objects[0] + ": " + objects[1]);
+		}
+		
+		
+		
 	}
 
 }
