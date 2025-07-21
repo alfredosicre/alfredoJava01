@@ -32,7 +32,7 @@ public class Prueba01Carga {
 		Persona p2 = new Persona();
 		p2.setApellidos("Lopez");
 		
-		Colaborador c2 = new Colaborador();
+		Colaborador c2 = new Colaborador(); 
 		c2.setNroProveedor(123456);
 		c2.setServicio("Informatica");
 		c2.setPersona(p2);

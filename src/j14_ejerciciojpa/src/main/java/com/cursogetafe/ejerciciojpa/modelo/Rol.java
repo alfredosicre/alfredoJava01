@@ -40,11 +40,11 @@ public class Rol implements Serializable {
 
 
 
-	private int getIdRol() {
+	public int getIdRol() {
 		return idRol;
 	}
 
-	private void setIdRol(int idRol) {
+	public void setIdRol(int idRol) {
 		this.idRol = idRol;
 	}
 
