@@ -31,6 +31,8 @@ public class Consulta01 {
 		List<Integer> numeros = em.createQuery(jpql, Integer.class).getResultList();
 		numeros.forEach(System.out::println);
 		
+		//-----------------
+		
 		System.out.println("-------------------------");
 		jpql = "select c.nroCliente, c.categoria from Cliente c";
 		List<Object[]> lista = em.createQuery(jpql, Object[].class).getResultList();

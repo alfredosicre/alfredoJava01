@@ -15,6 +15,7 @@
 		<class>com.cursogetafe.ejerciciojpa.modelo.Persona</class>
 		<class>com.cursogetafe.ejerciciojpa.modelo.Producto</class>
 		<class>com.cursogetafe.ejerciciojpa.modelo.Rol</class>
+		<class>com.cursogetafe.ejerciciojpa.consultas.Consulta02</class>
 		
 		
         <properties>

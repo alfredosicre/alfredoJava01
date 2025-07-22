@@ -86,7 +86,7 @@ public class Cliente extends Rol implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Cliente [nroCliente=" + nroCliente + ", categoria=" + categoria + ", productos=" + productos + "]";
+		return "Cliente [nroCliente=" + nroCliente + ", categoria=" + categoria;
 	}
 	
 	
