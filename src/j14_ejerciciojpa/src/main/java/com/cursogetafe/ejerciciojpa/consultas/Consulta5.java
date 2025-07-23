@@ -26,6 +26,8 @@ public class Consulta5 {
 		// Realiza una sola consulta de clientes join roles join personas join clientes_productos join productos
 		// Devuelve los productos en modo eager
 		
+		// En las 3 consultas se ve lo mismo, pero la ejecucion es distinta
+		
 		String jpql3 = "select c from Cliente c join fetch c.persona left join fetch c.productos "; // fech lo convierte a eager, en la misma consulta lo carga todo
 		
 		TypedQuery<Cliente> q = em.createQuery(jpql3, Cliente.class);

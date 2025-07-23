@@ -19,7 +19,6 @@ public class Persona implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idPersona;
-
 	private String apellidos;
 	
 	@OneToMany(mappedBy = "persona")
