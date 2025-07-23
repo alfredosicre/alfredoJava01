@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="javax.imageio.stream.FileImageInputStream"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
     <fullyQualifiedTypeName name="com.cursogetafe.ejerciciojpa.modelo.Cliente"/>
     <fullyQualifiedTypeName name="com.cursogetafe.ejerciciojpa.config.Config"/>
+    <fullyQualifiedTypeName name="clasesdto.ClienteDTO"/>
 </qualifiedTypeNameHistroy>
