@@ -42,7 +42,7 @@ public class Config {
 	}
 	
 	
-	private static Properties getProp() { // leemos el fichero app.properties
+	static Properties getProp() { // leemos el fichero app.properties
 		Properties prop = new Properties();
 		try(FileReader fr = new FileReader("app.properties")) {
 			prop.load(fr);
