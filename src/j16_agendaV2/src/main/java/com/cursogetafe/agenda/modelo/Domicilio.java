@@ -2,8 +2,12 @@ package com.cursogetafe.agenda.modelo;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Domicilio implements Serializable {
 
+	
 	private String tipoVia;
 	private String via;
 	private int numero;

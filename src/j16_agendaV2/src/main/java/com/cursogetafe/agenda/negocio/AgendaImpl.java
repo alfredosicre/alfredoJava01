@@ -9,7 +9,7 @@ import java.util.TreeSet;
 
 import com.cursogetafe.agenda.modelo.Contacto;
 import com.cursogetafe.agenda.persistencia.ContactoDao;
-import com.cursogetafe.agenda.persistencia.ContactoDaoJDBC;
+import com.cursogetafe.agenda.persistencia.ContactoDaojpa;
 
 public class AgendaImpl implements Agenda {
 	
@@ -18,7 +18,7 @@ public class AgendaImpl implements Agenda {
 	public AgendaImpl() {
 //		cDao = new ContactoDaoMem();
 //		cDao = new ContactoDaoMemSerial();
-		cDao = new ContactoDaoJDBC();
+		cDao = new ContactoDaojpa();
 	}
 
 		

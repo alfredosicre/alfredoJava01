@@ -6,7 +6,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.commons.dbcp2.BasicDataSource;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -21,7 +21,7 @@ public class Config {
 	
 	public static EntityManagerFactory getEmf(){
 		if(emf == null) {
-			emf = Persistence.createEntityManagerFactory("ejercicioJPA");
+			emf = Persistence.createEntityManagerFactory("agenda");
 		}
 		return emf;
 	}

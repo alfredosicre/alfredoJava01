@@ -35,6 +35,9 @@ public class MenuPrincipal {
 			case 1:
 				new NuevoContacto(agenda);
 				break;
+			case 2:
+				new BuscarContacto(agenda);
+				break;
 			case 3:
 				new ConsultarTodos(agenda);
 				break;
