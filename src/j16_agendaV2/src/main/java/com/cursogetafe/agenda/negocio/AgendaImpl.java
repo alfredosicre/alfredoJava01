@@ -21,7 +21,7 @@ public class AgendaImpl implements Agenda {
 //		cDao = new ContactoDaoMemSerial();
 //		cDao = new ContactoDaoJDBC();
 //		cDao = new ContactoDaojpa();
-		cDao = beanFactory.getContactoDao();
+		cDao = beanFactory.getContactoDao(); // de la clase beanFactory coje el valor (get) de ContactoDao.
 	}
 
 		

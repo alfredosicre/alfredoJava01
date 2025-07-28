@@ -5,6 +5,8 @@ import com.cursogetafe.agenda.persistencia.ContactoDaoMem;
 import com.cursogetafe.agenda.persistencia.ContactoDaoMemSerial;
 import com.cursogetafe.agenda.persistencia.ContactoDaojpa;
 import com.cursogetafe.agenda.persistencia.ContactoDaoJDBC;
+import com.cursogetafe.agenda.negocio.Agenda;
+import com.cursogetafe.agenda.negocio.AgendaImpl;
 
 public class beanFactory {
 	
@@ -18,5 +20,14 @@ public class beanFactory {
 		default -> new ContactoDaojpa();
 		};
 	}
-
+	
+public static Agenda getAgenda() {
+		
+		String agen = Config.getProp().getProperty("negocio");
+		return switch (agen) {
+		
+		default -> new AgendaImpl();
+		};
+	}
+	
 }
