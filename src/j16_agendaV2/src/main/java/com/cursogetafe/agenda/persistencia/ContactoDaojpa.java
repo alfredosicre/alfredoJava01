@@ -21,6 +21,10 @@ public class ContactoDaojpa implements ContactoDao {
 		
 	}
 	
+	public ContactoDaojpa(EntityManagerFactory emf) {
+		this.emf = emf;
+	}
+	
 	@Override
 	public void insertar(Contacto c) {
 		em = emf.createEntityManager();
@@ -98,8 +102,8 @@ public class ContactoDaojpa implements ContactoDao {
 		em = emf.createEntityManager();
 		String jpql =
 				"select c from Contacto c "
-				+ "where c.nombre like :cad"
-				+ "or c.apellidos like :cad"
+				+ "where c.nombre like :cad "
+				+ "or c.apellidos like :cad "
 				+ "or c.apodo like :cad";
 		
 		TypedQuery<Contacto> q = em.createQuery(jpql, Contacto.class);

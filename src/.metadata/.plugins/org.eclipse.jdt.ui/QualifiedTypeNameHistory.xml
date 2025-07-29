@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="agenda.config.Config"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="vista.MenuPrincipal"/>
-    <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.lang.Runtime"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Persistence"/>
     <fullyQualifiedTypeName name="com.cursogetafe.jpa.config.Config"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="com.cursogetafe.jpa.ejemplo03.Persona03"/>
@@ -43,11 +36,8 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.EntityManagerFactory"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="com.cursogetafe.agenda.config.Config"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Embedded"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Embeddable"/>
     <fullyQualifiedTypeName name="jakarta.persistence.AttributeOverride"/>
@@ -60,4 +50,14 @@
     <fullyQualifiedTypeName name="com.cursogetafe.agenda.persistencia.ContactoDao"/>
     <fullyQualifiedTypeName name="com.cursogetafe.agenda.negocio.AgendaImpl"/>
     <fullyQualifiedTypeName name="com.cursogetafe.agenda.config.beanFactory"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="java.beans.PersistenceDelegate"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="com.cursogetafe.agenda.modelo.Contacto"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Query"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.exceptions.AssertionFailedException"/>
+    <fullyQualifiedTypeName name="org.hibernate.LazyInitializationException"/>
+    <fullyQualifiedTypeName name="java.awt.event.WindowAdapter"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
