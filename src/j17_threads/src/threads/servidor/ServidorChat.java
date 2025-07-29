@@ -37,6 +37,7 @@ public class ServidorChat {
 	private class AtiendeCliente implements Runnable {
 		private Socket socket;
 		private String user;
+		private PrintWriter out;
 		
 		private static int cant;
 		private static Map<String, AtiendeCliente> sala = new HashMap<>();
@@ -54,6 +55,8 @@ public class ServidorChat {
 			try(PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 				BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 					
+				this.out = out;
+				
 				out.println("Binvenido al nuevo servicio de chat...");
 				
 				out.println("Por favor, identificate: ");
@@ -72,6 +75,8 @@ public class ServidorChat {
 				log(user + " se ha conectado");
 				log("hay " + cant + " usuarios en la sala");
 				
+				difusion("SRV:" + user + " se ha conectado");
+				
 				String linea;
 				while((linea = in.readLine()) != null) {
 					out.println("SRV: " + linea);
@@ -89,6 +94,12 @@ public class ServidorChat {
 			LocalDateTime ahora = LocalDateTime.now();
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yy HH:mm:ss");
 			return dtf.format(ahora);
+		}
+		
+		private void difusion(String mje) {
+			for(AtiendeCliente cli : sala.values()) {
+				cli.out.println(mje);
+			}
 		}
 	}
 	
