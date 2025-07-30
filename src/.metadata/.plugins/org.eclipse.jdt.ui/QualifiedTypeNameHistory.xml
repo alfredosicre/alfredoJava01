@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
-    <fullyQualifiedTypeName name="com.cursogetafe.ejerciciojpa.modelo.Config"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Inheritance"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.InheritanceType"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.JoinTable"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="clasesdto.ClienteDTO"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputFilter.Config"/>
     <fullyQualifiedTypeName name="com.cursogetafe.ejerciciojpa.config.Config"/>
     <fullyQualifiedTypeName name="com.cursogetafe.ejerciciojpa.modelo.Cliente"/>
@@ -46,9 +35,7 @@
     <fullyQualifiedTypeName name="threads.Th02Runnable"/>
     <fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
     <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
-    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
     <fullyQualifiedTypeName name="java.net.ServerSocket"/>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
@@ -60,4 +47,17 @@
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="threads.servidor.ServidorChat.AtiendeCliente"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="threads.ThreadUtil"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.LinkedBlockingQueue"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.CompletableFuture"/>
+    <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
 </qualifiedTypeNameHistroy>
