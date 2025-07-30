@@ -70,6 +70,8 @@ public class ServidorChat {
 				}
 				
 				out.println(user + " ya estas en la sala");
+				out.println();
+				help();
 				sala.put(user, this);
 				cant++;
 				log(user + " se ha conectado");
@@ -79,7 +81,34 @@ public class ServidorChat {
 				
 				String linea;
 				while((linea = in.readLine()) != null) {
-					out.println("SRV: " + linea);
+					
+					if(linea.length() > 0 && linea.charAt(0) == '@') { // mensaje privado
+						if(linea.contains(" ")) {
+							String userDestino = linea.substring(1, linea.indexOf(" "));
+							String mensaje = linea.substring(linea.indexOf(" ") + 1);
+							if(sala.containsKey(userDestino)) {
+								sala.get(userDestino).out.println("Privado de " + user + ": " + mensaje);
+							} else {
+								out.println(userDestino + " no esta conectado");
+							}
+						}else {
+							out.println("Formato incorrecto, no se ha enviado el mensaje");
+						}
+					}else { // no es un mensaje privado
+						switch(linea.toLowerCase()) {
+						case "-w", "who":
+							for(String usr : sala.keySet()) {
+								out.println("SER: " + usr);
+							}
+							break;
+						case "-h", "help":
+							help();
+							break;
+						default:
+							difusion(user + ": " + linea);
+						}
+					}
+					
 				}
 				
 				} catch (IOException e) {
@@ -100,6 +129,15 @@ public class ServidorChat {
 			for(AtiendeCliente cli : sala.values()) {
 				cli.out.println(mje);
 			}
+		}
+		private void help() {
+			out.println("Ayuda del Chat");
+			out.println("----------------------------------------");
+			out.println("-q: terminar sesion");
+			out.println("-h: mostrar esta ayuda");
+			out.println("-w: consultar usuarios");
+			out.println("@Usuario mensaje: para mensajes privados");
+			out.println("----------------------------------------");
 		}
 	}
 	
