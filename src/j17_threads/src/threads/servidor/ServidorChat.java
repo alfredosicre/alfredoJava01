@@ -67,6 +67,7 @@ public class ServidorChat {
 					out.println("El usuario es incorrecto o no existe");
 					out.println("Por favor, identificate: ");
 					user = in.readLine();
+					user = user.replace(" ", "_");
 				}
 				
 				out.println(user + " ya estas en la sala");
@@ -80,7 +81,8 @@ public class ServidorChat {
 				difusion("SRV:" + user + " se ha conectado");
 				
 				String linea;
-				while((linea = in.readLine()) != null) {
+				boolean sesion = true;
+				while(sesion && (linea = in.readLine()) != null) {
 					
 					if(linea.length() > 0 && linea.charAt(0) == '@') { // mensaje privado
 						if(linea.contains(" ")) {
@@ -103,6 +105,15 @@ public class ServidorChat {
 							break;
 						case "-h", "help":
 							help();
+							break;
+						case "-q", "-quit":
+							out.println("SER: Hasta otra ocasion...");
+							sala.remove(user);
+							cant--;
+							difusion("SER: " + user + " se ha desconectado");
+							log(user + " se ha desconectado");
+							sesion = false;
+							socket.close();
 							break;
 						default:
 							difusion(user + ": " + linea);
@@ -131,6 +142,7 @@ public class ServidorChat {
 			}
 		}
 		private void help() {
+			out.println("----------------------------------------");
 			out.println("Ayuda del Chat");
 			out.println("----------------------------------------");
 			out.println("-q: terminar sesion");
