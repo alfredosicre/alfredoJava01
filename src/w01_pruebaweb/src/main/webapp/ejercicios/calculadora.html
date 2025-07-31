@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+#calculadora{
+
+    background-color: #acacac;
+    padding: 15px;
+    width: 400px;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+#display{
+    background-color: white;
+    margin: 0px 2px;
+    padding: 7px;
+    height: min-content;
+    text-align: right;
+    border-radius: 10px;
+}
+#teclado{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 3px;
+    height: 75%;
+    padding: 15px 0;
+}
+#operacion{
+    margin: 0;
+    font-size: 0.5em;
+}
+#resultado{
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+button {
+    /* width: 45px; */
+    max-width: auto;
+    height: auto;
+    margin: 2px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #444444;
+}
+.num{
+    background-color: azure;
+}
+.num:hover{
+    background-color: rgb(179, 255, 255);
+}
+#c{
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+#suma{
+    grid-area: 2/4/5/5;
+}
+#igual{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background-color: lightblue;
+}
+#igual:hover{
+    background-color: rgb(152, 210, 229);
+}
+
+</style>
+<script>
+
+let num = '0';
+let resu = '';
+let puntoPresionado = false;
+let primerNumero = true;
+let operador;
+let ingresadoOperador = false;
+let ingresadoIgual = false;
+
+//controles
+let displayOperacion;
+let displayResultado;
+
+function pressNumero(ev) {
+    if (ingresadoIgual){
+        borrar();
+    }
+    let digito = ev.currentTarget.innerText;
+    if (num === '0')
+        num = '';
+    if (num.length < 12)
+        num += digito;
+    muestraResu(num);
+    ingresadoOperador = false;
+}
+
+function pressPunto() {
+    if (ingresadoIgual){
+        borrar();
+    }
+    if (!puntoPresionado) {
+        puntoPresionado = true;
+        num += '.';
+        muestraResu(num);
+    }
+}
+
+function pressOperador(ev) {
+    operador = ev.currentTarget.innerText;
+    ingresadoIgual = false;
+    puntoPresionado = false;
+    if (ingresadoOperador) {
+        resu = resu.substring(0, resu.length - 1) + operador;
+        muestraOp(resu);
+    }
+    ingresadoOperador = true;
+    if (primerNumero) {
+        primerNumero = false;
+        resu = num + ' ' + operador;
+    } else {
+        resu = eval(resu + num) + '';
+        muestraResu(resu);
+        resu += ' ' + operador;
+    }
+    muestraOp(resu);
+    num = '0';
+}
+
+function pressIgual() {
+    if (primerNumero)
+        resu = num;
+    else
+        resu += ' ' + num;
+
+    num = eval(resu) + '';
+    muestraResu(num);
+    muestraOp(resu + ' =');
+    resu = '';
+    ingresadoIgual = true;
+    ingresadoOperador = false;
+    primerNumero = true;
+}
+
+function muestraResu(resultado) {
+    if (resultado.length > 12) {
+        if (resultado.indexOf('.') != -1) 
+            resultado = resultado.substring(0, 13);
+        else
+            resultado = 'ERROR';       
+    }
+    displayResultado.innerText = resultado;
+}
+
+function muestraOp(operacion) {
+    displayOperacion.innerText = operacion;
+}
+
+function borrar() {
+    num = '0';
+    resu = '';
+    puntoPresionado = false;
+    primerNumero = true;
+    ingresadoOperador = false;
+    ingresadoIgual = false;
+    muestraOp('\u00A0');
+    muestraResu('0');
+}
+
+window.onload=function(){
+    displayOperacion = document.getElementById('operacion');
+    displayResultado = document.getElementById('resultado');
+    let numeros = document.getElementsByClassName('num');
+    for (let i = 0; i < numeros.length; i++) {
+        numeros[i].onclick = pressNumero;
+    }
+    let operadores = document.getElementsByClassName('op');
+    for (let i = 0; i < operadores.length; i++) {
+        operadores[i].onclick = pressOperador;
+    }
+    document.getElementById('punto').onclick = pressPunto;
+    document.getElementById('igual').onclick = pressIgual;
+    document.getElementById('c').onclick = borrar;
+}
+</script>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="display">
+            <p id="operacion">&nbsp;</p>
+            <p id="resultado">0</p>
+        </div>
+        <div id="teclado">
+            <button id="c">C</button>
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="op" id="suma">+</button>
+            <button class="op">-</button>
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="op">*</button>
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="op">/</button>
+            <button id="punto">,</button>
+            <button class="num">0</button>
+            <button id="igual">=</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -40,7 +40,6 @@ INDEX VERSION 1.134+/Users/mananas/ALFREDO/alfredoJava01/src/.metadata/.plugins/
 3436499621.index
 1014705943.index
 2679830697.index
-3468314333.index
 3474487700.index
 1404648560.index
 4018573093.index
